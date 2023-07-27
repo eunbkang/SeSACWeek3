@@ -16,6 +16,7 @@
 		7E73849F2A7210120010CA32 /* TodoTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E73849E2A7210120010CA32 /* TodoTableViewController.swift */; };
 		7E7384A12A7232D50010CA32 /* StudyTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E7384A02A7232D50010CA32 /* StudyTableViewController.swift */; };
 		7E7384A32A7249690010CA32 /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E7384A22A7249690010CA32 /* Extension.swift */; };
+		7E7384A52A724D360010CA32 /* Setting.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7E7384A42A724D360010CA32 /* Setting.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		7E73849E2A7210120010CA32 /* TodoTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoTableViewController.swift; sourceTree = "<group>"; };
 		7E7384A02A7232D50010CA32 /* StudyTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudyTableViewController.swift; sourceTree = "<group>"; };
 		7E7384A22A7249690010CA32 /* Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
+		7E7384A42A724D360010CA32 /* Setting.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Setting.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +74,7 @@
 				7E73849E2A7210120010CA32 /* TodoTableViewController.swift */,
 				7E7384A02A7232D50010CA32 /* StudyTableViewController.swift */,
 				7E7384A22A7249690010CA32 /* Extension.swift */,
+				7E7384A42A724D360010CA32 /* Setting.storyboard */,
 			);
 			path = SeSACWeek3;
 			sourceTree = "<group>";
@@ -137,6 +140,7 @@
 				7E7384972A71FFFE0010CA32 /* LaunchScreen.storyboard in Resources */,
 				7E7384942A71FFFE0010CA32 /* Assets.xcassets in Resources */,
 				7E7384922A71FFFD0010CA32 /* Main.storyboard in Resources */,
+				7E7384A52A724D360010CA32 /* Setting.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -304,8 +308,9 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -331,8 +336,9 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
