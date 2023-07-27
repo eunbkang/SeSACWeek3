@@ -17,6 +17,7 @@
 		7E7384A12A7232D50010CA32 /* StudyTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E7384A02A7232D50010CA32 /* StudyTableViewController.swift */; };
 		7E7384A32A7249690010CA32 /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E7384A22A7249690010CA32 /* Extension.swift */; };
 		7E7384A52A724D360010CA32 /* Setting.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7E7384A42A724D360010CA32 /* Setting.storyboard */; };
+		7E7384A82A7253D20010CA32 /* SettingTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E7384A72A7253D20010CA32 /* SettingTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,7 @@
 		7E7384A02A7232D50010CA32 /* StudyTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudyTableViewController.swift; sourceTree = "<group>"; };
 		7E7384A22A7249690010CA32 /* Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
 		7E7384A42A724D360010CA32 /* Setting.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Setting.storyboard; sourceTree = "<group>"; };
+		7E7384A72A7253D20010CA32 /* SettingTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +66,7 @@
 		7E7384892A71FFFD0010CA32 /* SeSACWeek3 */ = {
 			isa = PBXGroup;
 			children = (
+				7E7384A62A7253BF0010CA32 /* Assignment */,
 				7E73848A2A71FFFD0010CA32 /* AppDelegate.swift */,
 				7E73848C2A71FFFD0010CA32 /* SceneDelegate.swift */,
 				7E73848E2A71FFFD0010CA32 /* ViewController.swift */,
@@ -77,6 +80,14 @@
 				7E7384A42A724D360010CA32 /* Setting.storyboard */,
 			);
 			path = SeSACWeek3;
+			sourceTree = "<group>";
+		};
+		7E7384A62A7253BF0010CA32 /* Assignment */ = {
+			isa = PBXGroup;
+			children = (
+				7E7384A72A7253D20010CA32 /* SettingTableViewController.swift */,
+			);
+			path = Assignment;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -151,6 +162,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7E7384A82A7253D20010CA32 /* SettingTableViewController.swift in Sources */,
 				7E73848F2A71FFFD0010CA32 /* ViewController.swift in Sources */,
 				7E73849F2A7210120010CA32 /* TodoTableViewController.swift in Sources */,
 				7E7384A12A7232D50010CA32 /* StudyTableViewController.swift in Sources */,
