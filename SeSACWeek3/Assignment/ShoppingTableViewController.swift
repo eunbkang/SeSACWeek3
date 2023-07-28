@@ -28,6 +28,7 @@ class ShoppingTableViewController: UITableViewController {
         }
         
         shoppingList.append(text)
+        addTextField.text = ""
         tableView.reloadData()
     }
     
@@ -50,6 +51,7 @@ class ShoppingTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "shoppingCell")!
         let star = UIImageView(image: UIImage(systemName: "star"))
+        let checkMark = UIImageView(image: UIImage(systemName: "checkmark.square"))
         
         cell.textLabel?.text = shoppingList[indexPath.row]
         cell.textLabel?.font = .preferredFont(forTextStyle: .body)

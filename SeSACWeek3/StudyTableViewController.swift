@@ -27,7 +27,21 @@ class StudyTableViewController: UITableViewController {
     
     // 섹션 내 헤더 타이틀 (String? 이므로 없으면 nil)
     override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        return section == 0 ? "공부 목록" : "기기 목록"
+//        return section == 0 ? "공부 목록" : "기기 목록"
+        
+        // if문으로 설정하는 경우 모든 경우의 수 대응해주어야 함
+        if section == 0 {
+            return "1"
+        } else if section == 1 {
+            return "2"
+        } else if section == 2 {
+            return "3"
+        } /*else {
+//            return ""
+            return nil // 반환값이 옵셔널이므로 nil 반환해도 됨
+        }*/
+        
+        return "" // 또는 조건문 밖에 반환
     }
     
     //1. (필수) 셀 갯수
