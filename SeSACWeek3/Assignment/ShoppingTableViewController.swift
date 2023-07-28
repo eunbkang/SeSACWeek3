@@ -70,6 +70,16 @@ class ShoppingTableViewController: UITableViewController {
         print(#function, indexPath)
         let cell = tableView.cellForRow(at: indexPath)!
         
-        cell.imageView?.image = UIImage(systemName: "checkmark.square.fill")
+        let currentImage = cell.imageView?.image
+        let image1 = UIImage(systemName: "checkmark.square")
+        let image2 = UIImage(systemName: "checkmark.square.fill")
+        
+        cell.imageView?.image = self.toggleImage(currentImage: currentImage, image1: image1, image2: image2)
+    }
+    
+    func toggleImage(currentImage: UIImage?, image1: UIImage?, image2: UIImage?) -> UIImage? {
+        let returnImage = currentImage == image1 ? image2 : image1
+        
+        return returnImage
     }
 }
