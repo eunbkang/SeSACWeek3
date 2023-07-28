@@ -25,3 +25,10 @@ extension UILabel {
         self.textAlignment = .center
     }
 }
+
+extension UIView {
+    func configCornerRadius(amount: CGFloat = 10) {
+        self.layer.cornerRadius = amount
+        self.clipsToBounds = true
+    }
+}

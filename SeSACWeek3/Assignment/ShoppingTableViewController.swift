@@ -13,7 +13,7 @@ class ShoppingTableViewController: UITableViewController {
     @IBOutlet var addTextField: UITextField!
     @IBOutlet var addButton: UIButton!
     
-    var shoppingList = ["그립톡 구매하기", "사이다 구매", "아이패드 케이스 최저가 알아보기", "양말"]
+    var shoppingList = ShoppingData().list
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,22 +26,11 @@ class ShoppingTableViewController: UITableViewController {
             showAlert()
             return
         }
+        let newItem = Shopping(item: text, isLiked: false, isDone: false)
         
-        shoppingList.append(text)
+        shoppingList.append(newItem)
         addTextField.text = ""
         tableView.reloadData()
-    }
-    
-    func configUI() {
-        configCornerRadiusToView(addButton)
-        configCornerRadiusToView(headerBackgroundView)
-        
-        addTextField.placeholder = "무엇을 구매하실 건가요?"
-    }
-    
-    func configCornerRadiusToView(_ view: UIView, amount: CGFloat = 10) {
-        view.layer.cornerRadius = amount
-        view.clipsToBounds = true
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -49,39 +38,30 @@ class ShoppingTableViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "shoppingCell")!
-        let star = UIImageView(image: UIImage(systemName: "star"))
-        let checkMark = UIImageView(image: UIImage(systemName: "checkmark.square"))
+        let cell = tableView.dequeueReusableCell(withIdentifier: ShoppingTableViewCell.identifier) as! ShoppingTableViewCell
+        let row = shoppingList[indexPath.row]
         
-        cell.textLabel?.text = shoppingList[indexPath.row]
-        cell.textLabel?.font = .preferredFont(forTextStyle: .body)
-        
+        cell.shoppingList = shoppingList
+        cell.configCell(row: row)
+        cell.likeButton.tag = indexPath.row
         cell.selectionStyle = .none
         
-        star.tintColor = .systemYellow
-        cell.accessoryView = star
-        
         return cell
-    }
-    
-    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 60
     }
 
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         print(#function, indexPath)
-        let cell = tableView.cellForRow(at: indexPath)!
         
-        let currentImage = cell.imageView?.image
-        let image1 = UIImage(systemName: "checkmark.square")
-        let image2 = UIImage(systemName: "checkmark.square.fill")
-        
-        cell.imageView?.image = self.toggleImage(currentImage: currentImage, image1: image1, image2: image2)
+        shoppingList[indexPath.row].isDone.toggle()
+        tableView.reloadData()
     }
     
-    func toggleImage(currentImage: UIImage?, image1: UIImage?, image2: UIImage?) -> UIImage? {
-        let returnImage = currentImage == image1 ? image2 : image1
+    func configUI() {
+        addButton.configCornerRadius()
+        headerBackgroundView.configCornerRadius()
         
-        return returnImage
+        addTextField.placeholder = "무엇을 구매하실 건가요?"
+        
+        tableView.rowHeight = 60
     }
 }
